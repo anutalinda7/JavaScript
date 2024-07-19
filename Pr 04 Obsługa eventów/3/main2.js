@@ -9,23 +9,23 @@ let insertDivX;
 let insertDivY;
 
 div.addEventListener('mousedown', (e) => {
-    div.style.backgroundColor = "grey";
+    div.style.backgroundColor = 'grey';
     drawActive = !drawActive;
     insertDivX = e.offsetX;
     insertDivY = e.offsetY;
     console.log(insertDivX, insertDivY);
-})
-div.addEventListener('mousemove', (e)=>{
-    if(drawActive){
+});
+div.addEventListener('mousemove', (e) => {
+    if (drawActive) {
         divX = e.clientX - insertDivX;
         divY = e.clientY - insertDivY;
         div.style.left = `${divX}px`;
         div.style.top = `${divY}px`;
         // console.log(divX, divY);
     }
-})
-div.addEventListener('mouseup', ()=>{
-    div.style.backgroundColor = "black";
+});
+div.addEventListener('mouseup', () => {
+    div.style.backgroundColor = 'black';
     drawActive = !drawActive;
     console.log(drawActive);
-})
+});

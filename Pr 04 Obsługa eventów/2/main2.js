@@ -1,22 +1,21 @@
-
-document.body.addEventListener("click", (event) =>{
+document.body.addEventListener('click', (event) => {
     console.log(event.clientX, event.clientY);
     const color = getColor(event);
     document.body.style.backgroundColor = color;
 });
 
 const getColor = (e) => {
-    if (e.clientX%2 === 0){
-        if(e.clientY%2 === 0){
-            return "green";
+    if (e.clientX % 2 === 0) {
+        if (e.clientY % 2 === 0) {
+            return 'green';
         } else {
-        return "red"}
-    }
-    else {
-        if (e.clientY%2 === 0){
-            return "red";
-        }else {
-            return " blue";
+            return 'red';
+        }
+    } else {
+        if (e.clientY % 2 === 0) {
+            return 'red';
+        } else {
+            return ' blue';
         }
     }
-}
+};

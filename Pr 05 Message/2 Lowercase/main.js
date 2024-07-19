@@ -1,12 +1,9 @@
-
-
-//wspólna część 
+//wspólna część
 const input = document.querySelector('input');
 const label = document.querySelector('label');
 const div = document.querySelector('div');
 const passwords = ['jedEN', 'DwA', 'trzY'];
 const messages = ['to the first', 'to the second', ' to the third'];
-
 
 // 1. z forEach i switchem
 // const showMessage = (e) => {
@@ -18,7 +15,7 @@ const messages = ['to the first', 'to the second', ' to the third'];
 //             input.value = '';
 //             break;
 //         }
-        
+
 //     })
 // }
 
@@ -33,14 +30,11 @@ const messages = ['to the first', 'to the second', ' to the third'];
 //                 console.log ('jest ')
 //                 div.textContent = messages[i]
 //                 e.target.value = '';
-//             } 
+//             }
 //         }
 //         )}
 
-
-
-
-// 3. inaczej forEach i if-em najpierw zmieniamy na lowercase całą tablice 
+// 3. inaczej forEach i if-em najpierw zmieniamy na lowercase całą tablice
 //a potem porównujemy
 
 // passwords.forEach((password, i) => {
@@ -50,20 +44,17 @@ const messages = ['to the first', 'to the second', ' to the third'];
 // const showMessage = (e) => {
 //             div.textContent = 'probuj'
 //             const text = e.target.value.toLowerCase();
-    
+
 //             passwords.forEach((password, i) => {
 //                 if(password === text){
 //                     console.log ('jest ')
 //                     div.textContent = messages[i]
 //                     e.target.value = '';
-//                 } 
+//                 }
 //             }
 //             )}
 
-
-
-
-            //4. z map i pętlą for 
+//4. z map i pętlą for
 // const newPasswords = passwords.map(password => password.toLocaleLowerCase())
 
 // const showMessage = (e) => {
@@ -77,17 +68,12 @@ const messages = ['to the first', 'to the second', ' to the third'];
 // }
 //wspólna część
 const clearInput = (e) => {
-    div.textContent = ''
-//    e.target.value = '';
-   input.value = '';
-    console.log(e)
-}
+    div.textContent = '';
+    //    e.target.value = '';
+    input.value = '';
+    console.log(e);
+};
 
 input.addEventListener('click', clearInput);
 label.addEventListener('click', clearInput);
 input.addEventListener('input', showMessage);
-
-
-
-  
-  
