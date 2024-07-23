@@ -18,3 +18,4 @@ class AddElement {
 }
 
 const addElement = new AddElement('button', 1, 2);
+
