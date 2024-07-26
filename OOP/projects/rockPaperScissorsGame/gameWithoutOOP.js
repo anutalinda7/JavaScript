@@ -78,3 +78,5 @@ function letsPlay() {
 
 hands.forEach((hand) => hand.addEventListener('click', handSelection));
 document.querySelector('.start').addEventListener('click', letsPlay);
+
+
