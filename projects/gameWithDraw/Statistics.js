@@ -1,26 +1,23 @@
-class Statistics {
- constructor() {
-  this.gameResults = [];
+class Statistics{
+    constructor(){
+        this.gameResults = [];
+    }
 
- }
+    addGameToStatistics(win, bid) {
+        let gameResult = {
+            win: win,
+            bid: bid
+        }
+        this.gameResults.push(gameResult)
 
- addGameToStatistics(win, bid) {
-  let gameResult = {
-   win,
-   bid
-  }
-  // console.log(gameResult);
-  this.gameResults.push(gameResult)
- }
+    }
 
- showGameStatistics() {
-  let games = this.gameResults.length;
-  let wins = this.gameResults.filter(result => result.win).length;
-  let losses = this.gameResults.filter(result => !result.win).length
-  // console.log(games, wins, losses);
-  return [games, wins, losses]
- }
-
+    showGameStatistics() {
+        let games = this.gameResults.length;
+        let wins = this.gameResults.filter((result) => result.win ).length;
+        let losses = this.gameResults.filter((result) => { return !result.win }).length; 
+        return [games, wins, losses]
+    }
 }
 
-// const stats = new Statistics()
+export default Statistics;

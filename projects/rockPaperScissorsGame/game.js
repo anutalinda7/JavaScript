@@ -63,22 +63,7 @@ class Game {
             document.querySelector('.losses span').textContent = ++this.gameSummary.losses;
             whoWin.textContent = 'Wygrała ai';
             whoWin.style.color = 'red';
-        }
-        //the same, but with If 
-        // if(result === 'remis'){
-        //     document.querySelector('.draws span').textContent = ++this.gameSummary.draws;
-        //     whoWin.textContent = 'remis :\\';
-        //     whoWin.style.color = 'grey';
-        // } else if (result === 'win') {
-        //     document.querySelector('.wins span').textContent = ++this.gameSummary.wins; 
-        //     whoWin.textContent = 'Ty wygrałeś';
-        //     whoWin.style.color = 'green';
-        // } else {
-        //     document.querySelector('.losses span').textContent = ++this.gameSummary.losses;
-        //     whoWin.textContent = 'Wygrała ai';
-        //     whoWin.style.color = 'red';
-        // }
-        
+        }        
     }
 
     endGame() {
